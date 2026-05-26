@@ -87,9 +87,36 @@ public class Driver {
                     if (flee){
                         System.out.println("You fled the battle");
                         fightOn = false;
-                        gameRunning = false
+                        gameRunning = false;
                     }
+                    else{
+                        System.out.println("You fail to flee the fight");
+                        System.out.printf("The %s attempts to hit you\n", monster.getName());
+                        monsterAttackRoll = diceRoll.nextInt(6);
+                        if(monsterAttackRoll <= 0){
+                            System.out.printf("The %s failed to hit you\n", monster.getName());
 
+                        }
+                        else{
+                            System.out.printf("The %s hit you for %d\n", monster.getName(), monsterAttackRoll);
+                            tempHealthHuman = human.getHealth() - monsterAttackRoll;
+                            human.setHealth(tempHealthHuman);
+                        }
+                    }
+                    break;
+                default:
+                    System.out.println("Not a valid choice");
+
+            }
+            if(human.getHealth() <= 0){
+                life = false;
+                fightOn = false;
+                System.out.println("GAME OVER, You died...");
+                gameRunning = false;
+                break;
+            }
+            else{
+                System.out.printf("You have %d health left\n", human.getHealth());
             }
 
         }
@@ -97,3 +124,4 @@ public class Driver {
 
     }
 }
+
