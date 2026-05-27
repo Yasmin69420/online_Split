@@ -1,5 +1,6 @@
 package utils;
 
+//location of file directory -> src -> utils -> GameCharacters.Java
 public class GameCharacters {
 
     private String name;
