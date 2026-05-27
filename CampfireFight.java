@@ -17,7 +17,7 @@ public class CampfireFight {
     private static Random diceRoll = new Random();
 
     public static void main (String[] args){
-        System.out.println("--You continue walking and stumble across a left over gun. You are suprised there are still bullets contained, you notice a campfire where you encounter two grunts chatting among themselves--");
+        System.out.println("--You continue walking and stumble across a left over gun and a potion of regeneration. You are suprised there are still bullets contained, you notice a campfire where you encounter two grunts chatting among themselves--");
 
         System.out.println("Grunt 1: hey so where is your gun? ");
         System.out.println("Grunt 2: huh? i thought you were carrying it- OMG");
