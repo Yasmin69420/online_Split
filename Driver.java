@@ -2,7 +2,7 @@ package main;
 import utils.GameCharacters;
 import java.util.Scanner;
 import java.util.Random;
-
+//location of file directory -> src -> main -> driver.java
 public class Driver {
 
     private static Scanner myinput = new Scanner(System.in);
