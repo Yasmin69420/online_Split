@@ -2,6 +2,7 @@ package main;
 import utils.GameCharacters;
 import java.util.Scanner;
 import java.util.Random;
+//location of file directory -> src -> main -> MiniBossFight1.java
 //Location: Takes place in the third level fight-> abandoned village
 
 public class MiniBossFight1 {
