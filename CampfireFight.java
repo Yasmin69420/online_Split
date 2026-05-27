@@ -55,11 +55,26 @@ public class CampfireFight {
 //option to fight
         while(fightOn){
             System.out.println("What would you like to do");
-            System.out.println("[f]ight\n[r]un\n[s]hoot");
+            System.out.println("[f]ight\n[r]un\n[s]hoot\n[h]eal\n[d]odge");
             String choice = myinput.nextLine().toLowerCase();
 // if fought
             switch (choice){
                 //==============================================================
+                case "d":
+                    //dodge the grunts attacks although small amount of damage will be taken
+                    System.out.printf("%s Dodges Servant Empress attacks\n", human.getName());
+                    monsterAttackRoll = diceRoll.nextInt(2);
+                    break;
+
+
+
+                //===================================
+                case "h":
+                    //heal human
+                    System.out.printf("%s heals themselves by 2 hearts\n", human.getName());
+                    tempHealthHuman = human.getHealth() + 2;
+                    human.setHealth((tempHealthHuman));
+                    break;
                 //Fight option
                 case "f":
                     //human attack
