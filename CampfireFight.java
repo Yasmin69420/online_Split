@@ -3,7 +3,7 @@ import utils.GameCharacters;
 import java.util.Scanner;
 import java.util.Random;
 
-//Location: Takes place in the second fight -> campfire
+//location of file directory -> src -> main -> CampfireFight.java
 
 public class CampfireFight {
     private static Scanner myinput = new Scanner(System.in);
