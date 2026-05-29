@@ -39,14 +39,14 @@ public class shopBackpack {
             System.out.println("would you like to purchase anything?");
             String equals = myInput.nextLine().toLowerCase();
             switch (equals) {
-                case "y":
+                case "yes":
                     purchaseItems();
 
 
                     break;
-                case "n":
+                case "no":
                     System.out.println("you opt not to purchase any items...");
-                    break;
+                    return;
                 default:
                     System.out.println("try again");
                     break;
