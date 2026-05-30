@@ -6,10 +6,15 @@ public class ItemInfo {
     private int qty;
     private double cost;
 
+    /**
+     ItemInfo is used to store the info of each item
+     */
+
     public ItemInfo(String itemName, int qty, double cost) {
         this.itemName = itemName;
         this.qty = qty;
         this.cost = cost;
+
 
     }
 
@@ -20,6 +25,9 @@ public class ItemInfo {
 
 
     }
+    /**
+     getItemName finds the shop items and attaches atrubuts to them
+     */
 
     public String getItemName() {
         return itemName;
