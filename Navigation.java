@@ -1,4 +1,14 @@
+package main;
 import java.util.Scanner;
+import utils.GameCharacters;
+import java.util.Random;
+import main.Driver;
+import main.CampfireFight;
+import main.FinalBoss;
+import main.minibossfight0;
+
+
+
 public class Navigation {
     public static Scanner myInput = new Scanner(System.in);
     private static int currentLocation = 110;
@@ -67,35 +77,68 @@ public class Navigation {
         }
 
     }
+    //The room(areas) are all ordered in a vertical line, it may look confusing but its to help players how the game is intended to be play
     public static void room110() {
-        System.out.println("Welcome to room 110");
+        System.out.println("==You observe the area noticing that there is an abandoned village nearby==");
+
+
     }
     public static void room120(){
-        System.out.println("Welcome to room 120");
+        System.out.println("==As you enter the abandoned village you notice a grunt attempting to loot the already broken village==");
+        System.out.println("OI YOU BETTER LEAVE!");
+
+        Driver.StartTutorialFight();
+
     }
     public static void room130(){
-        System.out.println("Welcome to room 130");
+        System.out.println("==Entering outside of the village==");
+        System.out.println("--You continue walking and stumble across a left over gun and a potion of regeneration. You are suprised there are still bullets contained, you notice a campfire where you encounter two grunts chatting among themselves--");
     }
     public static void room140() {
-        System.out.println("Welcome to room 140");
+        System.out.println("==Entering campsite==");
+
+        CampfireFight.StartCampfireFight(); //starts campfire fight
     }
-    public static void room210(){
-        System.out.println("Welcome to room 210");
-    }
-    public static void room220(){
-        System.out.println("Welcome to room 220");
-    }
-    public static void room230() {
-        System.out.println("Welcome to room 230");
-    }
+
     public static void room240() {
-        System.out.println("Welcome to room 240");
+        System.out.println("==Outside of the campsite==");
+        System.out.println("-The grunts weren't tough but they were starting to becoming noticably stronger");
+        System.out.println("-You observe the plainfield and notice a shop nearby-");
+        System.out.println("-Continue West to enter the shop-");
+
+
     }
+
+    public static void room230() {
+        System.out.println("==Entering shop==");
+    }
+
+    public static void room220(){
+
+        System.out.println("=Leaving shop=");
+        System.out.println("-Continue west-");
+    }
+
+
+    public static void room210(){
+
+        System.out.println("=You continue west and the path appears to go south where a burning feeling tense up in your lungs=");
+        System.out.println("=Enter south=");
+    }
+
+
+
     public static void room310() {
-        System.out.println("Welcome to room 310");
+        System.out.println("==The path continues and you notice a tall building that looks sinister==");
+        System.out.println("-Go East to Enter the building-");
     }
     public static void room320(){
-        System.out.println("Welcome to room 320");
+        System.out.println("==You enter the building==");
+        System.out.println("-Its... unnerving-");
+
+        minibossfight0.startFight(); //starts the mini boss fight
+
+
     }
     public static void room330() {
         System.out.println("Welcome to room 330");
@@ -103,22 +146,31 @@ public class Navigation {
     public static void room340() {
         System.out.println("Welcome to room 340");
     }
-    public static void room410() {
-        System.out.println("Welcome to room 410");
-    }
-    public static void room420() {
-        System.out.println("Welcome to room 420");
-    }
-    public static void room430() {
-        System.out.println("Welcome to room 430");
-    }
+
     public static void room440() {
         System.out.println("Welcome to room 440");
     }
+
+    public static void room430() {
+        System.out.println("Welcome to room 430");
+    }
+
+    public static void room420() {
+        System.out.println("Welcome to room 420");
+    }
+
+    public static void room410() {
+        System.out.println("Welcome to room 410");
+        FinalBoss.FINALBATTLE();
+
+    }
+
+
+
     public static void navigate(){
         tempLocation = currentLocation;
 
-        System.out.println("You currently in section " + currentLocation);
+        System.out.println("You currently in area " + currentLocation);
         System.out.println("which direction would you like to go?");
         System.out.println("North [w], South [s], East [d], West [a]\nPress [q] to quit");
         System.out.println("Enter Direction w,s,d,a");
@@ -126,19 +178,19 @@ public class Navigation {
 
         switch (directionEntered){
 
-            case "s":
+            case "s": //button for south
                 currentLocation = currentLocation + 100;
                 gotoLocation(currentLocation);
                 break;
-            case "w":
+            case "w": //button for north
                 currentLocation = currentLocation - 100;
                 gotoLocation(currentLocation);
                 break;
-            case "a":
+            case "a": //button for west
                 currentLocation = currentLocation - 10;
                 gotoLocation(currentLocation);
                 break;
-            case "d":
+            case "d": //Button for east
                 currentLocation = currentLocation + 10;
                 gotoLocation(currentLocation);
                 break;
@@ -149,4 +201,3 @@ public class Navigation {
         }
     }
 }
-
