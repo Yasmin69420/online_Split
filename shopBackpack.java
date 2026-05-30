@@ -29,7 +29,7 @@ public class shopBackpack {
         shopInventory = new ArrayList<>();
         shopInventory.add(new ItemInfo("AK-47", 1, 20.50,2,0,0,"improves attack damage"));
         shopInventory.add(new ItemInfo("bullet-proof vest", 1, 15.00,0,0,1,"improves defence"));
-        shopInventory.add(new ItemInfo("smoke bomb", 3, 7.00,0,0,0,"helps escape"));
+        shopInventory.add(new ItemInfo("smoke bomb", 3, 7.00,0,0,0,"helps escape fights"));
         shopInventory.add(new ItemInfo("bandages", 5, 5.00,0,5,0,"heals you"));
         return shopInventory;
 
