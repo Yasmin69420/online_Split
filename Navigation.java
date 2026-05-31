@@ -72,12 +72,12 @@ public class Navigation {
                 room440();
                 break;
             default:
-                System.out.println("You can't go that way!");
+                System.out.println("The space warps and distorts with dark magic as you are turned back to where you came from...\nYou can't escape.");
                 currentLocation = tempLocation;
         }
 
     }
-    //The room(areas) are all ordered in a vertical line, it may look confusing but its to help players how the game is intended to be play
+    //The room(areas) are all ordered in their number value, combined with the directional inputs, this gives an illusion to the player of a 4x4 grid
     public static void room110() {
         System.out.println("==You observe the area noticing that there is an abandoned village nearby==");
 
@@ -141,6 +141,8 @@ public class Navigation {
 
     }
     public static void room330() {
+        System.out.println("==Outside of the building==");
+        System.out.println("");
         System.out.println("-Continue East-");
     }
     public static void room340() {
@@ -156,11 +158,13 @@ public class Navigation {
     }
 
     public static void room420() {
+        System.out.println("Foreboding walls of the castle loom west-side, a Threatening miasma making the very air feel toxic to breath.");
         System.out.println("==Entering shop==");
     }
 
     public static void room410() {
         System.out.println("=Leaving shop=");
+        System.out.println("The threatening miasma intensifies...");
         FinalBoss.FINALBATTLE();
 
     }
@@ -194,7 +198,7 @@ public class Navigation {
                 currentLocation = currentLocation + 10;
                 gotoLocation(currentLocation);
                 break;
-            case "q":
+            case "q"://Exit game button
                 System.out.println("Thanks for playing!\nQuiting...");
                 gameRunning = false;
                 break;
