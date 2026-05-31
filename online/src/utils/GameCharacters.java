@@ -8,6 +8,7 @@ public class GameCharacters {
     private String name;
     private String charType;
     private int health;
+    private int defense;
     private int attack;
     private int gold;
     private ArrayList<Item> backpack;
@@ -15,6 +16,7 @@ public class GameCharacters {
     //constructor
     public GameCharacters(){
         this.health = 120;
+        this.defense = 50;
         this.attack = 33;
         this.gold = 50;
         this.backpack = new ArrayList<>();
@@ -43,6 +45,10 @@ public class GameCharacters {
         return health;
     }
 
+    public int getDefense() {
+        return defense;
+    }
+
     public int getGold() { return gold;}
 
     public void setHealth(int health) {
@@ -50,6 +56,12 @@ public class GameCharacters {
 
 
         }
+
+    public void setDefense(int defense) {
+        this.defense = defense;
+
+
+    }
 
         //helper methods
     public boolean IsAlive() {
