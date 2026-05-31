@@ -142,18 +142,22 @@ public class Navigation {
     }
     public static void room330() {
         System.out.println("==Outside of the building==");
-        System.out.println("");
+        System.out.println("-The enemy was challenging, however you must press forth...");
         System.out.println("-Continue East-");
     }
     public static void room340() {
+        System.out.println("=The path continues southward... the scenery noticibly getting less greener...=");
         System.out.println("-Continue South-");
     }
 
     public static void room440() {
+        System.out.println("=You notice now that there is a distinct lack of vegitation, the air thick with smoke=");
         System.out.println("-Continue West-");
     }
 
     public static void room430() {
+        System.out.println("=All around lays only waste and distruction and the air thick with the smoke of gunfire and something more sinister=");
+        System.out.println("=Amongst all this, a lone shop stands in the near distance=");
         System.out.println("-Continue West to enter the shop-");
     }
 
