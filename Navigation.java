@@ -141,26 +141,26 @@ public class Navigation {
 
     }
     public static void room330() {
-        System.out.println("Welcome to room 330");
+        System.out.println("-Continue East-");
     }
     public static void room340() {
-        System.out.println("Welcome to room 340");
+        System.out.println("-Continue South-");
     }
 
     public static void room440() {
-        System.out.println("Welcome to room 440");
+        System.out.println("-Continue West-");
     }
 
     public static void room430() {
-        System.out.println("Welcome to room 430");
+        System.out.println("-Continue West to enter the shop-");
     }
 
     public static void room420() {
-        System.out.println("Welcome to room 420");
+        System.out.println("==Entering shop==");
     }
 
     public static void room410() {
-        System.out.println("Welcome to room 410");
+        System.out.println("=Leaving shop=");
         FinalBoss.FINALBATTLE();
 
     }
