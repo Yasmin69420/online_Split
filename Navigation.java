@@ -10,9 +10,8 @@ import main.minibossfight0;
 
 /**
  * <h1>Navigation</h1>
- * Public Class Navigation process all navigation related code
- * The aim of this code is to process directional inputs of the player and utilising a framework/system in its processing, determine where the player is.
- * Then it should either initialize shops, fights or descriptive text depending on where the methods have determined the player is.
+ * <p>Public Class Navigation process all navigation related code.</p>
+ * <p>The aim of this code is to process directional inputs of the player and utilising a framework/system in its processing, determine where the player is. Then it should either initialize shops, fights or descriptive text depending on where the methods have determined the player is.</p>
  */
 public class Navigation {
     public static Scanner myInput = new Scanner(System.in);
@@ -22,8 +21,7 @@ public class Navigation {
 
     /**
      * <h1>Main Method</h1>
-     * The purpose of the main method is to initialise and run the navigation system e.i the base of the game, until the game is to stop running.
-     * as this is meant to run on first start up of the game, it doubles as the beginning of the navigation
+     * <p>The purpose of the main method is to initialise and run the navigation system e.i the base of the game, until the game is to stop running. as this is meant to run on first start up of the game, it doubles as the beginning of the navigation.</p>
      * @param args
      */
     public static void main(String[] args){
@@ -35,9 +33,7 @@ public class Navigation {
 
     /**
      * <h1>gotoLocation Method</h1>
-     * This entire method is meant to translate the numbered values from the locationEntered variable into methods to which the navigation can carry out.
-     * in the event the location entered value doesn't match any of the cases, the code prints out a message and sets currentLocation to equal tempLocation
-     * this in effect sends the player back to within the possible location values
+     * <p>This entire method is meant to translate the numbered values from the locationEntered variable into methods to which the navigation can carry out. in the event the location entered value doesn't match any of the cases, the code prints out a message and sets currentLocation to equal tempLocation. This in effect sends the player back to within the possible location values</p>
      * @param locationEntered
      */
     public static void gotoLocation(int locationEntered){
@@ -184,10 +180,8 @@ public class Navigation {
 
     /**
      * <h1>Navigation Method</h1>
-     * This method first stores the player's current location into the variable temp location then prints prompts for the player to enter the direction in which they would like to travel.
-     * then depending on which direction is entered alters the values of the currentLocation and directs the code to run its corresponding case in the gotoLocation method
-     * The processing of location is determined by having the hundreds place of the integer represent the location of the player on an imaginary y axis, and the tens unit of the value represent the location of the player on an inmaginary x axis.
-     * The method also allows an option to quit the game with the entering of the key q, which will set game running to false and print out a message.
+     * <p>This method first stores the player's current location into the variable temp location then prints prompts for the player to enter the direction in which they would like to travel. then depending on which direction is entered alters the values of the currentLocation and directs the code to run its corresponding case in the gotoLocation method.</p>
+     * <p>The processing of location is determined by having the hundreds place of the integer represent the location of the player on an imaginary y axis, and the tens unit of the value represent the location of the player on an inmaginary x axis.The method also allows an option to quit the game with the entering of the key q, which will set game running to false and print out a message.</p>
      */
     public static void navigate(){
         tempLocation = currentLocation;
