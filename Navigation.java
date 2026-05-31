@@ -8,19 +8,38 @@ import main.FinalBoss;
 import main.minibossfight0;
 
 
-
+/**
+ * <h1>Navigation</h1>
+ * Public Class Navigation process all navigation related code
+ * The aim of this code is to process directional inputs of the player and utilising a framework/system in its processing, determine where the player is.
+ * Then it should either initialize shops, fights or descriptive text depending on where the methods have determined the player is.
+ */
 public class Navigation {
     public static Scanner myInput = new Scanner(System.in);
     private static int currentLocation = 110;
     public static int tempLocation;
     private static boolean gameRunning = true;
 
+    /**
+     * <h1>Main Method</h1>
+     * The purpose of the main method is to initialise and run the navigation system e.i the base of the game, until the game is to stop running.
+     * as this is meant to run on first start up of the game, it doubles as the beginning of the navigation
+     * @param args
+     */
     public static void main(String[] args){
         System.out.println("Welcome to the navigation tutorial");
         do{
             navigate();
         }while (gameRunning == true);
     }
+
+    /**
+     * <h1>gotoLocation Method</h1>
+     * This entire method is meant to translate the numbered values from the locationEntered variable into methods to which the navigation can carry out.
+     * in the event the location entered value doesn't match any of the cases, the code prints out a message and sets currentLocation to equal tempLocation
+     * this in effect sends the player back to within the possible location values
+     * @param locationEntered
+     */
     public static void gotoLocation(int locationEntered){
         switch (locationEntered){
             case 110:
@@ -77,6 +96,7 @@ public class Navigation {
         }
 
     }
+
     //The room(areas) are all ordered in their number value, combined with the directional inputs, this gives an illusion to the player of a 4x4 grid
     public static void room110() {
         System.out.println("==You observe the area noticing that there is an abandoned village nearby==");
@@ -99,7 +119,6 @@ public class Navigation {
 
         CampfireFight.StartCampfireFight(); //starts campfire fight
     }
-
     public static void room240() {
         System.out.println("==Outside of the campsite==");
         System.out.println("-The grunts weren't tough but they were starting to becoming noticably stronger");
@@ -108,26 +127,19 @@ public class Navigation {
 
 
     }
-
     public static void room230() {
         System.out.println("==Entering shop==");
     }
-
     public static void room220(){
 
         System.out.println("=Leaving shop=");
         System.out.println("-Continue west-");
     }
-
-
     public static void room210(){
 
         System.out.println("=You continue west and the path appears to go south where a burning feeling tense up in your lungs=");
         System.out.println("=Enter south=");
     }
-
-
-
     public static void room310() {
         System.out.println("==The path continues and you notice a tall building that looks sinister==");
         System.out.println("-Go East to Enter the building-");
@@ -149,23 +161,19 @@ public class Navigation {
         System.out.println("=The path continues southward... the scenery noticibly getting less greener...=");
         System.out.println("-Continue South-");
     }
-
     public static void room440() {
         System.out.println("=You notice now that there is a distinct lack of vegitation, the air thick with smoke=");
         System.out.println("-Continue West-");
     }
-
     public static void room430() {
         System.out.println("=All around lays only waste and distruction and the air thick with the smoke of gunfire and something more sinister=");
         System.out.println("=Amongst all this, a lone shop stands in the near distance=");
         System.out.println("-Continue West to enter the shop-");
     }
-
     public static void room420() {
         System.out.println("Foreboding walls of the castle loom west-side, a Threatening miasma making the very air feel toxic to breath.");
         System.out.println("==Entering shop==");
     }
-
     public static void room410() {
         System.out.println("=Leaving shop=");
         System.out.println("The threatening miasma intensifies...");
@@ -174,7 +182,13 @@ public class Navigation {
     }
 
 
-
+    /**
+     * <h1>Navigation Method</h1>
+     * This method first stores the player's current location into the variable temp location then prints prompts for the player to enter the direction in which they would like to travel.
+     * then depending on which direction is entered alters the values of the currentLocation and directs the code to run its corresponding case in the gotoLocation method
+     * The processing of location is determined by having the hundreds place of the integer represent the location of the player on an imaginary y axis, and the tens unit of the value represent the location of the player on an inmaginary x axis.
+     * The method also allows an option to quit the game with the entering of the key q, which will set game running to false and print out a message.
+     */
     public static void navigate(){
         tempLocation = currentLocation;
 
